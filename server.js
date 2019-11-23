@@ -3,6 +3,7 @@ const dbConn = require('./db');
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
+const routeConfig = require('./routes');
 const PORT = process.env.PORT || 6969;
 
 
@@ -10,6 +11,7 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+routeConfig(app);
 
 dbConn()
 	.then(() => {

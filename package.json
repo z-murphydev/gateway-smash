@@ -4,7 +4,9 @@
   "description": "Website for a local smash tournament.",
   "main": "server.js",
   "scripts": {
-    "test": "N/A"
+    "test": "N/A",
+    "dev": "concurrently \"nodemon server.js'\" \"yarn run client\"",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,8 @@
     "mongoose": "^5.7.12"
   },
   "devDependencies": {
-    "morgan": "^1.9.1"
+    "concurrently": "^5.0.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.1"
   }
 }

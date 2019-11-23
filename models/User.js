@@ -6,7 +6,10 @@ const userSchema = new Schema({
     lastName: String,
     tag: String,
     main: String,
-    score: Number,
+    score: {
+      type: Number,
+      default: 1500,
+    }, 
     timePlaying: String
 })
 
