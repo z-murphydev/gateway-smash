@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "N/A",
+    "client": "cd client && yarn start",
     "dev": "concurrently \"nodemon server.js'\" \"yarn run client\"",
     "watch": "nodemon server.js"
   },
