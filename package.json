@@ -5,7 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "N/A",
+<<<<<<< HEAD
     "dev": "concurrently \"nodemon server.js'\" \"cd client && yarn run start\"",
+=======
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"nodemon server.js'\" \"yarn run client\"",
+>>>>>>> 112b10d029c52ba2b770d7dc4745be7af1aa1baf
     "watch": "nodemon server.js"
   },
   "repository": {
