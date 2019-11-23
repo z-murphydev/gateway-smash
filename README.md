@@ -62,7 +62,7 @@ Existential Dead: Never play the same character in a set and never win a match =
 
 
 
-
+# Stage Striking (Image hosted above should be available.)
 
 
 
