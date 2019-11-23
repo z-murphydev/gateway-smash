@@ -31,6 +31,21 @@ const Rules = () => (
         </strong>
       </p>
     </Card>
+    <Card>
+      <h2>Stage Striking</h2>
+      <p>
+        {' '}
+        Play a game of rock paper scissors. Loser banes 1 Starter stage. After the first game winner bans 2 stages total and
+        the loser picks out of the 7. You cannot go to a stage you have won on. But the opponent may pick the stage you won
+        on.
+      </p>
+      <img
+        src='https://i.imgur.com/hD2WObA.png'
+        alt='Stages to strike'
+        title='source: imgur.com'
+        style={{ width: '100%' }}
+      />
+    </Card>
   </>
 );
 
