@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import { Player } from "Store";
 import ModifyScoreForm from "./ModifyScoreForm";
@@ -19,7 +20,7 @@ interface Props {
 const PlayerRow: React.FC<Props> = ({ player, modifyScore }) => (
   <tr>
     <td>
-      {player.firstName} "{player.tag}" {player.lastName}
+      {player.firstName} <Tag>{player.tag}</Tag> {player.lastName}
     </td>
     <td>{player.main}</td>
     <td>{player.score}</td>
@@ -30,3 +31,12 @@ const PlayerRow: React.FC<Props> = ({ player, modifyScore }) => (
 );
 
 export default PlayerRow;
+
+const Tag = styled.span`
+  font-weight: bolder;
+
+  &::before,
+  &::after {
+    content: '"';
+  }
+`;

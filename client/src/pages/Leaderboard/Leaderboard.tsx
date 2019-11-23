@@ -1,6 +1,8 @@
 import React from "react";
+import styled from "styled-components";
 
 import { usePlayers } from "hooks";
+import { spacing } from "utilities";
 import { Card } from "elements";
 import PlayerRow from "./PlayerRow";
 
@@ -16,12 +18,13 @@ const Leaderboard: React.FC<Props> = () => {
         {loading ? (
           <p>loading...</p>
         ) : (
-          <table>
+          <PlayerTable>
             <thead>
               <tr>
                 <th>Name</th>
                 <th>Main</th>
                 <th>Score</th>
+                <th>Edit Score</th>
               </tr>
             </thead>
             <tbody>
@@ -33,7 +36,7 @@ const Leaderboard: React.FC<Props> = () => {
                 />
               ))}
             </tbody>
-          </table>
+          </PlayerTable>
         )}
       </Card>
     </>
@@ -41,3 +44,12 @@ const Leaderboard: React.FC<Props> = () => {
 };
 
 export default Leaderboard;
+
+const PlayerTable = styled.table`
+  width: 100%;
+  text-align: left;
+
+  tr {
+    margin: ${spacing.sm} 0;
+  }
+`;
