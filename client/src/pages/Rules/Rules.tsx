@@ -16,6 +16,16 @@ const Rules = () => (
         and use it liberally.
       </li>
     </ul>
+    <p>
+      <strong>Commentator Guidelines:</strong> This event will be streamed and there will be live commentary. Anyone who
+      wants to is welcome to be a commentator whether you have experience or not. Have fun with your commentary, this is not
+      some high-level tournament. Talk with your co-caster before matches start and figure out the back and forth you guys
+      have. Try and figure out before the tournament what kind of style and flow you want to have.
+      <strong>
+        It is highly encouraged to avoid play by play casting as Smash is not the best game for play by plays. Comment on
+        good plays but talk about the match more than each individual action.
+      </strong>
+    </p>
   </>
 );
 
