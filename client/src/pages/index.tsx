@@ -1,9 +1,11 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import { Container } from "layout";
 import Rules from "./Rules";
 import Leaderboard from "./Leaderboard";
+import Missions from './Missions';
+
 
 interface Props {}
 
@@ -17,8 +19,11 @@ const index: React.FC<Props> = () => (
       <Route exact path="/leaderboard">
         <Leaderboard />
       </Route>
-    </Switch>
-  </Container>
+      
+    <Route path='/challenges'>
+      <Missions />
+    </Route>
+  </Switch>
 );
 
 export default index;
