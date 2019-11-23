@@ -76,4 +76,41 @@ const addScore = [
   }
 ];
 
-export default addScore;
+const loseScore = [
+  {
+    title: 'Self-Destruction:',
+    desc: 'Have a stock lead, SD, and lose the game',
+    value: '-500 credits - Repeatable'
+  },
+  {
+    title: 'Floor is Lava:',
+    desc: 'Air Dodge off stage to death',
+    value: '-250 Credits - Repeatable'
+  },
+  {
+    title: 'Imma Head Out:',
+    desc: 'Get 3 Stocked',
+    value: '-150 Credits - Repeatable'
+  },
+  {
+    title: 'Talk Shit, Get Hit:',
+    desc: 'Talk shit and lose',
+    value: '-1000 Credits – Repeatable'
+  },
+  {
+    title: 'First Time:',
+    desc: 'Get your shield broke',
+    value: '-250 Credits - Repeatable'
+  },
+  {
+    title: 'Nothing but Air:',
+    desc: 'Fail your Falcon Up B and fucking die',
+    value: '-10 Credits - Repeatable'
+  },
+  {
+    title: 'Existential Dead:',
+    desc: 'Never play the same character in a set and never win a match',
+    value: '-5000 Credits'
+  }
+];
+export { addScore, loseScore };
