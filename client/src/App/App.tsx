@@ -1,5 +1,6 @@
 import React from "react";
 
+import Stylesheets from "./Stylesheets";
 import Content from "../pages";
 
 interface Props {}
@@ -7,6 +8,8 @@ interface Props {}
 const App: React.FC<Props> = () => {
   return (
     <>
+      <Stylesheets />
+
       <Content />
     </>
   );
