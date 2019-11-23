@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+import { clrBg, clrTxt } from "utilities";
+
 export const GlobalStyle = createGlobalStyle`
     /* Reset */
     * {
@@ -15,5 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     #root {
         display: flex;
         flex-direction: column;
+        background: ${clrBg};
+        color: ${clrTxt}
     }
 `;
