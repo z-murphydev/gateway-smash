@@ -26,7 +26,11 @@ const Leaderboard: React.FC<Props> = () => {
             </thead>
             <tbody>
               {players.map(player => (
-                <PlayerRow player={player} />
+                <PlayerRow
+                  key={player._id}
+                  player={player}
+                  modifyScore={modifyScore}
+                />
               ))}
             </tbody>
           </table>

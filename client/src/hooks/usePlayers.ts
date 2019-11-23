@@ -74,15 +74,14 @@ export const usePlayers = () => {
     }
   };
 
-  interface modifyScoreProps {
-    _id: string;
-    score: number;
-    action: string;
-  }
-  const modifyScore: (arg0: modifyScoreProps) => void = ({
+  const modifyScore = ({
     _id,
     score,
     action
+  }: {
+    _id: string;
+    score: number;
+    action: string;
   }) => {
     switch (action) {
       case INCREASE_SCORE:
@@ -91,6 +90,7 @@ export const usePlayers = () => {
 
       case DECREASE_SCORE:
         decreaseScore({ _id, score });
+        break;
 
       default:
         break;
