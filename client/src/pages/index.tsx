@@ -19,7 +19,7 @@ const index: React.FC<Props> = () => (
         <Leaderboard />
       </Route>
 
-      <Route path="/missions">
+      <Route exact path="/missions">
         <Missions />
       </Route>
     </Switch>
