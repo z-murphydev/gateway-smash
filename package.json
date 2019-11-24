@@ -6,7 +6,7 @@
   "scripts": {
     "test": "N/A",
     "client": "cd client && yarn start",
-    "dev": "concurrently \"nodemon server.js'\" \"yarn run start\"",
+    "dev": "concurrently \"nodemon server.js'\" \"cd ./client && yarn run start\"",
     "watch": "nodemon server.js"
   },
   "repository": {

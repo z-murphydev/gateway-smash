@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-import { Player, INCREASE_SCORE, DECREASE_SCORE } from "Store";
+import { Player, INCREASE_SCORE, DECREASE_SCORE } from 'Store';
 
 export const usePlayers = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -10,8 +10,8 @@ export const usePlayers = () => {
     const getPlayers = async () => {
       setLoading(true);
       try {
-        const response: Response = await fetch("/api/users/leaderboard", {
-          method: "GET"
+        const response: Response = await fetch('/api/users/leaderboard', {
+          method: 'GET'
         });
         const data: Player[] = await response.json();
 
@@ -27,19 +27,13 @@ export const usePlayers = () => {
     getPlayers();
   }, []);
 
-  const updateScore = async ({
-    _id,
-    score
-  }: {
-    _id: string;
-    score: number;
-  }) => {
+  const updateScore = async ({ _id, score }: { _id: string; score: number }) => {
     setLoading(true);
     try {
-      const response: Response = await fetch("/api/users/score/update", {
-        method: "POST",
+      const response: Response = await fetch('/api/users/score/update', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json"
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({ _id, score })
       });
@@ -55,7 +49,7 @@ export const usePlayers = () => {
   };
 
   const increaseScore = ({ _id, score }: { _id: string; score: number }) => {
-    const player: Player | undefined = players.find(p => _id === p._id);
+    const player: Player | undefined = players.find((p) => _id === p._id);
 
     if (player) {
       const updatedScore: number = player.score + score;
@@ -65,7 +59,7 @@ export const usePlayers = () => {
   };
 
   const decreaseScore = ({ _id, score }: { _id: string; score: number }) => {
-    const player: Player | undefined = players.find(p => _id === p._id);
+    const player: Player | undefined = players.find((p) => _id === p._id);
 
     if (player) {
       const updatedScore: number = player.score - score;
@@ -74,15 +68,7 @@ export const usePlayers = () => {
     }
   };
 
-  const modifyScore = ({
-    _id,
-    score,
-    action
-  }: {
-    _id: string;
-    score: number;
-    action: string;
-  }) => {
+  const modifyScore = ({ _id, score, action }: { _id: string; score: number; action: string }) => {
     switch (action) {
       case INCREASE_SCORE:
         increaseScore({ _id, score });

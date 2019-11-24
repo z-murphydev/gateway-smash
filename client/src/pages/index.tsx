@@ -5,12 +5,17 @@ import { Container } from "layout";
 import Rules from "./Rules";
 import Leaderboard from "./Leaderboard";
 import Missions from "./Missions";
+import Overview from "./Overview";
 
 interface Props {}
 
 const index: React.FC<Props> = () => (
   <Container as="main">
     <Switch>
+      <Route exact path="/">
+        <Overview />
+      </Route>
+
       <Route exact path="/rules">
         <Rules />
       </Route>
