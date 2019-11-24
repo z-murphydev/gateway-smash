@@ -1,8 +1,17 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-import { spacing, rounded, clrBg2, elevation, transition } from "utilities";
+import {
+  spacing,
+  rounded,
+  clrBg2,
+  elevation,
+  transition,
+  success,
+  danger,
+  white
+} from "utilities";
 
-export const Card = styled.section`
+export const Card = styled.section<{ success?: boolean; danger?: boolean }>`
   --bg: ${clrBg2};
 
   padding: ${spacing.lg};
@@ -15,4 +24,26 @@ export const Card = styled.section`
   &:hover {
     ${elevation[4]};
   }
+
+  ${props =>
+    (props.success || props.danger) &&
+    css`
+      box-shadow: none;
+      &:hover {
+        box-shadow: none;
+      }
+    `}
+
+    ${props =>
+      props.success &&
+      css`
+        --bg: ${success};
+      `}
+    
+    ${props =>
+      props.danger &&
+      css`
+        --bg: ${danger};
+        color: ${white};
+      `}
 `;

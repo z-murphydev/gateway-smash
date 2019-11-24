@@ -6,6 +6,7 @@ import Rules from "./Rules";
 import Leaderboard from "./Leaderboard";
 import Missions from "./Missions";
 import Overview from "./Overview";
+import Register from "./Register";
 
 interface Props {}
 
@@ -26,6 +27,10 @@ const index: React.FC<Props> = () => (
 
       <Route exact path="/missions">
         <Missions />
+      </Route>
+
+      <Route exact path="/register">
+        <Register />
       </Route>
     </Switch>
   </Container>
