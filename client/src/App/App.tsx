@@ -1,7 +1,8 @@
 import React from "react";
 
+import { Footer, Header } from "layout";
+import Content from "pages";
 import Stylesheets from "./Stylesheets";
-import Content from "../pages";
 
 interface Props {}
 
@@ -10,7 +11,9 @@ const App: React.FC<Props> = () => {
     <>
       <Stylesheets />
 
+      <Header />
       <Content />
+      <Footer />
     </>
   );
 };

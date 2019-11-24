@@ -15,6 +15,8 @@ export const Button = styled.button`
   cursor: pointer;
   padding: ${spacing.sm} ${spacing.md};
   border-radius: ${rounded};
+  border: none;
+  margin: ${spacing.xxs};
   background: var(--bg);
   color: ${white};
   ${transition({ prop: "background" })};

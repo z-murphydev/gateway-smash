@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import { clrBg, clrTxt } from "utilities";
+import { clrBg, clrTxt, clrBg2, spacing } from "utilities";
 
 export const GlobalStyle = createGlobalStyle`
     /* Reset */
@@ -19,5 +19,10 @@ export const GlobalStyle = createGlobalStyle`
         flex-direction: column;
         background: ${clrBg};
         color: ${clrTxt}
+    }
+
+    footer, header {
+        background: ${clrBg2};
+        padding: ${spacing.md} 0;
     }
 `;

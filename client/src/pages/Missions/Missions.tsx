@@ -1,17 +1,17 @@
-import React from 'react';
-import { Card } from 'elements';
-import Mission from './Mission';
-import { addScore, loseScore } from 'Store';
+import React from "react";
+import { Card } from "elements";
+import Mission from "./Mission";
+import { addScore, loseScore } from "Store";
 
 const Missions = () => (
   <>
-    <h1>Missions</h1>
+    <h2>Missions</h2>
     <Card>
       <h2>
         <strong>Earn Credits</strong>
       </h2>
       <ul>
-        {addScore.map((e) => (
+        {addScore.map(e => (
           <Mission {...e} />
         ))}
       </ul>
@@ -19,7 +19,7 @@ const Missions = () => (
     <Card>
       <h2>Lose Credits</h2>
       <ul>
-        {loseScore.map((e) => (
+        {loseScore.map(e => (
           <Mission {...e} />
         ))}
       </ul>
