@@ -2,12 +2,12 @@ require('dotenv').config();
 const dbConn = require('./db');
 const express = require('express');
 const app = express();
-const morgan = require('morgan');
 const routeConfig = require('./routes');
 const path = require('path');
 const PORT = process.env.PORT || 6969;
 
 if (process.env.NODE_ENV !== 'production') {
+  const morgan = require('morgan');
   app.use(morgan('dev'));
 }
 app.use(express.urlencoded({ extended: true }));
