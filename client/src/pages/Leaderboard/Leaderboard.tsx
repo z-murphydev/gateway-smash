@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { usePlayers } from "hooks";
+import { usePlayers, useTitle } from "hooks";
 import { spacing } from "utilities";
 import { Card } from "elements";
 import PlayerRow from "./PlayerRow";
@@ -9,6 +9,7 @@ import PlayerRow from "./PlayerRow";
 interface Props {}
 
 const Leaderboard: React.FC<Props> = () => {
+  useTitle("Leaderboard");
   const { players, loading, modifyScore } = usePlayers();
 
   return (

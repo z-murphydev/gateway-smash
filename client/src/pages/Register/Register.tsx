@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-import { useForm } from "hooks";
+import { useForm, useTitle } from "hooks";
 import { Form, Input, Card, Button } from "elements";
 
 interface Props {}
 
 const Register: React.FC<Props> = () => {
+  useTitle("Register Player");
   const [formWasSuccessful, setFormWasSuccessful] = useState<boolean | null>(
     null
   );

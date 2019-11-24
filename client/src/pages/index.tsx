@@ -1,6 +1,7 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useParams } from "react-router-dom";
 
+import { useJumpToTop } from "hooks";
 import { Container } from "layout";
 import Rules from "./Rules";
 import Leaderboard from "./Leaderboard";
@@ -10,30 +11,35 @@ import Register from "./Register";
 
 interface Props {}
 
-const index: React.FC<Props> = () => (
-  <Container as="main">
-    <Switch>
-      <Route exact path="/">
-        <Overview />
-      </Route>
+const Index: React.FC<Props> = () => {
+  const params = useParams();
+  useJumpToTop(params);
 
-      <Route exact path="/rules">
-        <Rules />
-      </Route>
+  return (
+    <Container as="main">
+      <Switch>
+        <Route exact path="/">
+          <Overview />
+        </Route>
 
-      <Route exact path="/leaderboard">
-        <Leaderboard />
-      </Route>
+        <Route exact path="/rules">
+          <Rules />
+        </Route>
 
-      <Route exact path="/missions">
-        <Missions />
-      </Route>
+        <Route exact path="/leaderboard">
+          <Leaderboard />
+        </Route>
 
-      <Route exact path="/register">
-        <Register />
-      </Route>
-    </Switch>
-  </Container>
-);
+        <Route exact path="/missions">
+          <Missions />
+        </Route>
 
-export default index;
+        <Route exact path="/register">
+          <Register />
+        </Route>
+      </Switch>
+    </Container>
+  );
+};
+
+export default Index;

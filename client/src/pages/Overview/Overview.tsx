@@ -1,8 +1,10 @@
 import React from "react";
 
+import { useTitle } from "hooks";
 import { Card } from "elements";
 
 const Overview = () => {
+  useTitle("Gateway Smash");
   return (
     <>
       <h1>Overview</h1>
