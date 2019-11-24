@@ -52,10 +52,6 @@ const Overview = () => {
           are attempting to get to become a credit king.
         </p>
       </Card>
-      <Link to="/register">Register</Link>
-      <Link to="/missions">Missions</Link>
-      <Link to="/rules">Rules</Link>
-      <Link to="/leaderboard">Leaderboard</Link>
     </>
   );
 };
