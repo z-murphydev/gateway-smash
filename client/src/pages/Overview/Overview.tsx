@@ -45,6 +45,7 @@ const Overview = () => {
       <Link to='/register'>Register</Link>
       <Link to='/missions'>Missions</Link>
       <Link to='/rules'>Rules</Link>
+      <Link to='/leaderboard'>Leaderboard</Link>
     </>
   );
 };

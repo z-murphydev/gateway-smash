@@ -5,12 +5,9 @@ router
   .get('/leaderboard', async (req, res) => {
     const allUsers = await Users.find({}).exec();
 
-    console.log(allUsers);
+    const sorted = allUsers.sort((a, b) => (a.score < b.score ? 1 : -1));
 
-    const sorted = allUsers.sort((a, b) => {
-      if (a.score > b.score) return -1;
-    });
-
+    console.log(sorted);
     return res.status(200).json(sorted);
   })
   .post('/create', async (req, res) => {
@@ -42,10 +39,8 @@ router
 
       const newUsers = await Users.find().exec();
 
-      const sorted = newUsers.sort((a, b) => {
-        if (a.score > b.score) return -1;
-      });
-
+      const sorted = newUsers.sort((a, b) => (a.score < b.score ? 1 : -1));
+      console.log(sorted);
       return res.status(200).json(sorted);
     } catch (err) {
       return res.status(500).json({ error: err });
