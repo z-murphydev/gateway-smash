@@ -31,7 +31,7 @@ const Register: React.FC<Props> = () => {
         return setFormWasSuccessful(false);
       }
 
-      setFormWasSuccessful(false);
+      setFormWasSuccessful(true);
     } catch (error) {
       setFormWasSuccessful(false);
     } finally {
