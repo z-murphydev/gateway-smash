@@ -48,9 +48,9 @@ const Rules = () => {
         <h2>Stage Striking</h2>
         <p>
           {" "}
-          Play a game of rock paper scissors. Loser banes 1 Starter stage. After
+          Play a game of rock paper scissors. Loser bans 1 starter stage, and winner selects from the remaining stages. After
           the first game winner bans 2 stages total and the loser picks out of
-          the 7. You cannot go to a stage you have won on. But the opponent may
+          the 5 remaining. You cannot go to a stage you have won on. But the opponent may
           pick the stage you won on.
         </p>
         <img
