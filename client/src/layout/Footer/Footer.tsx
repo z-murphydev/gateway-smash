@@ -7,17 +7,19 @@ interface Props {}
 
 const Footer: React.FC<Props> = () => (
   <Wrapper>
-    <p>
-      &copy; 2019
-      <br />
-      Zach Murphy &amp; Nich Secord
-    </p>
+    <Container>
+      <p>
+        &copy; 2019
+        <br />
+        Zach Murphy &amp; Nich Secord
+      </p>
+    </Container>
   </Wrapper>
 );
 
 export default Footer;
 
-const Wrapper = styled(Container).attrs({ as: "footer" })`
+const Wrapper = styled.footer`
   margin-top: auto;
   text-align: center;
   font-style: italic;
