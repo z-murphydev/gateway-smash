@@ -23,6 +23,7 @@ const Wrapper = styled(Container).attrs({ as: "header" })`
   align-items: center;
   width: 100%;
   grid-gap: ${spacing.md};
+  margin-bottom: ${spacing.lg};
 
   @media screen and (min-width: 992px) {
     grid-template-rows: initial;

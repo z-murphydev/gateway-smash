@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header } from "layout";
+import { Footer, Header } from "layout";
 import Content from "pages";
 import Stylesheets from "./Stylesheets";
 
@@ -13,6 +13,7 @@ const App: React.FC<Props> = () => {
 
       <Header />
       <Content />
+      <Footer />
     </>
   );
 };
