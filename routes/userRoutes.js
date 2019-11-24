@@ -11,7 +11,9 @@ router
     return res.status(200).json(sorted);
   })
   .post('/create', async (req, res) => {
-    if (!req.body) {
+    const { firstName, lastName, tag, main } = req.body;
+
+    if (!firstName || !lastName || !tag || !main) {
       return res.status(400).json({ error: 'Creation information is missing!' });
     }
 
