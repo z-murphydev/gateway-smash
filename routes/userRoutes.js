@@ -30,6 +30,10 @@ router
     }
   })
   .post('/score/update', async (req, res) => {
+    if (!req.body.token) {
+      return res.sendStatus(401);
+    }
+
     if (!req.body) {
       return res.status(400).json({ error: 'Update information is missing!' });
     }

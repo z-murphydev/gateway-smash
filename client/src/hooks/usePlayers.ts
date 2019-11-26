@@ -29,14 +29,23 @@ export const usePlayers = () => {
 
   const updateScore = async ({ _id, score }: { _id: string; score: number }) => {
     setLoading(true);
+    const token: string | null = localStorage.getItem('token');
     try {
       const response: Response = await fetch('/api/users/score/update', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ _id, score })
+        body: JSON.stringify({ _id, score, token })
       });
+
+      const { status } = response;
+
+      console.log(status);
+
+      if (status === 401) {
+        return alert('You cannot change the score. Please locate Zach (the guy with the red laptop.)');
+      }
       const data: Player[] = await response.json();
 
       setPlayers(data);
