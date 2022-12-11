@@ -23,7 +23,7 @@
   "homepage": "https://github.com/Munch-Z/gateway-smash#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongoose": "^5.7.12",
     "typescript": "^3.7.2"
   },
